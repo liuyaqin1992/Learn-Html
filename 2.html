@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body bgcolor = "#ffcc99">
+<script type="text/javascript">
+
+var Arraycolor = new Array("red","yellow","blue","green","purple");
+var n = 0;
+
+function turncolor(){
+	if (n == (Arraycolor.length-1)) {
+		n = 0;		
+		<!--当Arraycolor.length-1，"purple"时，n = 0,重新回答"red"-->
+    }
+	
+	document.bgColor = Arraycolor[n];
+	n ++ ;
+	<!--注意：n++的位置，若放在document.bgColor = Arraycolor[n]；上方，那么会跳过Array[0],直接从yellow开始-->
+}
+
+</script>
+
+<input type = "button" name = "Submit" value = "变换背景" onclick = "turncolor()"><p>点击按钮变化背景色
+
+</form>
+</body>
