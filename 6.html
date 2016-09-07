@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CSS下拉菜单</title> 
+<style>
+
+body,ul,li{
+	text-align:center;
+	/*文本的水平对齐方式：居中*/
+	background-color:white;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0px;
+	/*外边距属性*/
+	padding:0px;
+	/*内边距属性*/
+} 
+
+a{ 
+	color:#000000; 
+	text-decoration:none;
+	/*添加到文本的修饰：默认*/
+}
+
+li{
+	display:inline; 
+	/*display:inline；将元素显示为行内元素*/
+	list-style:none;
+	/*list-style:none；列表样式:无标记*/
+	list-style-position:outside;
+	/*list-style-position 属性设置在何处放置列表项标记：外部 (outside)或内部 (inside) */
+	font-weight:bold;
+	/*字体粗细*/
+	float:left;
+	/*元素浮动方向*/
+}
+
+/*a:连接平常的状态*/
+.list a{
+	color:#336601;
+	text-decoration:none;
+	/*添加到文本的修饰：默认*/
+	float:left;
+	width:100px;
+	padding:3px 5px 0px 5px;
+	/*内边距属性：上，右，下，左*/
+
+}
+
+/*a:hover:鼠标放到连接上的时候*/
+.list a:hover{
+	color:white;
+	float:left;
+	padding:3px 3px 0px 20px;
+	width:88px;
+	text-decoration:none;
+	background-color:#539D26;
+}
+
+/*a:active:连接被按下的时候*/
+.list a:active{
+	color:white;
+	float:left;
+	padding:3px 3px 0px 20px;
+	width:88px;
+	text-decoration:none;
+	background-color:#BD06B4;
+}
+
+/* div id = "nav" */
+#nav{
+	width:600px;
+	height:30px;
+	margin:0 auto;
+	padding:0px 5px;
+	text-align:center;
+	clear:both;
+	/*clear:both清除浮动*/
+}
+
+/*div class = "list" */
+.list{
+	line-height:25px;
+	text-align:left;
+	padding:5px;
+	/*所有 4 个内边距都是 5px*/
+	font-weight:normal;
+}
+
+/* onMouseOver鼠标移到目标上-> "menu1" */
+.menu1{
+	width:120px;
+	height:auto;
+	margin:20px 4px 0px 0px;
+	border:2px solid #9CDD75;
+	background-color:#F1FBEC;
+	color:#336601;
+	padding:8px 0px 0px 0px;
+	cursor:auto;
+	overflow-y:hidden;
+	/*Overflow-x 是否对内容的左/右边缘进行裁剪，Overflow-y 是否对内容的上/下边缘进行裁剪；hidden：裁剪内容 - 不提供滚动机制*/
+/*	filter:Alpha(opacity=70);*/
+	/*IE下使用*/
+/*	-moz-opacity:0.7;*/
+	/*Firefox下使用*/
+}
+
+/* onMouseOut鼠标移开时-> "menu2" */
+/* li class = "menu2" */
+.menu2{
+	width:120px;
+	height:20px;
+	margin:20px 4px 0px 0px;
+	background-color:#F5F5F5;
+	color:#999999;
+	border:2px solid #EEE8DD;
+	padding:8px 0px 0px 0px;
+	overflow-y:hidden;
+	cursor:auto;
+}
+</style> 
+</head> 
+ 
+<body> 
+<div id="nav"> 
+<ul> 
+	<li class="menu2" onMouseOver="this.className='menu1'"onMouseOut="this.className='menu2'">DIV+CSS
+		<div class="list">
+		<a href="#">我的日志</a><br /> 
+		<a href="#">我的相册</a><br /> 
+		<a href="#">我的收藏</a><br /> 
+		</div> 
+</li>
+
+	<li class="menu2" onMouseOver="this.className='menu1'"onMouseOut="this.className='menu2'">
+<a href="#">HTML</a> 
+		<div class="list">
+		<a href="#">我的日志</a><br /> 
+		<a href="#">我的相册</a><br /> 
+		<a href="#">我的收藏</a><br /> 
+		</div> 
+</li> 
+
+	<li class="menu2" onMouseOver="this.className='menu1'"onMouseOut="this.className='menu2'">
+	<a href="#">CSS</a>
+		<div class="list"> 
+		<a href="#">我的日志</a><br /> 
+		<a href="#">我的相册</a><br /> 
+		<a href="#">我的收藏</a><br />
+		</div> 
+	</li> 
+
+	<li class="menu2" onMouseOver="this.className='menu1'" onMouseOut="this.className='menu2'">
+	<a href="#">JAVA</a>
+		<div class="list"> 
+		<a href="#">我的日志</a><br /> 
+		<a href="#">我的相册</a><br /> 
+		<a href="#">我的收藏</a><br /> 
+		</div> 
+</li> 
+</ul> 
+</div> 
+</body> 
+</html> 
